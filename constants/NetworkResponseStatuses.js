@@ -1,0 +1,10 @@
+export default Object.freeze({
+    HTTP_SUCCESS: 200,
+    HTTP_CREATED: 201,
+    HTTP_BAD_REQUEST: 400,
+    HTTP_UN_AUTHORISED: 401,
+    HTTP_NOT_FOUND: 404,
+    HTPP_INTERNAL_SERVER: 500,
+   
+  })
+  
