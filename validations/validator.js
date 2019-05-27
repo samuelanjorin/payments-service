@@ -23,25 +23,8 @@ export const validator = async (inputData, schema) => {
         field: `${err.path[0]}`
       });
     });
-    return { hasError: true, errors };
+    return { hasError: true, errors }
   }
-};
+}
 
-/**
- *  Format validation error message
- *
- * @param {object} errors the validation error
- * @param {string} label
- * @param {string} message message to be displayed
- * @returns {string} the formatted error message
- * @method
- */
-export const errorFormatter = (errors, label, message) => {
-  const err = errors[0];
-  switch (err.type) {
-    case "string.regex.base":
-      return message || `${label || err.path} is empty`;
-    default:
-      return message || err;
-  }
-};
+

@@ -1,10 +1,10 @@
 
-import { validator } from "../validations/validator";
+import { validator } from "../validations/validator"
 import constants from '../constants/NetworkResponseStatuses'
 
 import {
   paymentSchema
-} from "../validations/schemas/schema";
+} from "../validations/schemas/schema"
 
 /**
  * @description Get the schema definitions
@@ -28,5 +28,5 @@ export default async (req, res, next) => {
       });
   }
   req.body = validation.fields;
-  return next();
+  return next()
 };

@@ -10,6 +10,7 @@ import constant from '../constants/NetworkResponseStatuses'
  */
 module.exports = function (err, req, res) {
   if (err) {
-     res.status(constant.HTPP_INTERNAL_SERVER).json({ message: 'Hey Something Broke, Contact Administrator' })
+    logger.error(err)
+    res.status(constant.HTPP_INTERNAL_SERVER).json({ message: 'Hey Something Broke, Contact Administrator' })
   }
 }

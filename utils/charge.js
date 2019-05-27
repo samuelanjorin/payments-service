@@ -1,4 +1,4 @@
-import Stripe from 'stripe';
+import Stripe from 'stripe' 
 
 const stripe = Stripe(process.env.STRIPE_TOKEN);
 
@@ -9,7 +9,7 @@ export default async (token, amount, currency, description) => {
           amount,
           currency,
           description,
-          source: token,
-        });
+          source: token
+        })
         return charge;
 };

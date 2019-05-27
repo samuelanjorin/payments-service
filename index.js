@@ -10,7 +10,7 @@ routeDependencies(app)
 const port = process.env.RACS_PORT || 7005
 
 app.listen(port, () => {
-  console.log(`Listening to port ${port}.......`)
+  logger.info(`Listening to port ${port}.......`)
 })
 
 process.on('uncaughtException', (ex) => {
