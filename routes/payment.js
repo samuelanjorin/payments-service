@@ -1,10 +1,9 @@
-import { Router } from 'express';
-import controller from '../controllers/payment';
-import validate from '../middlewares/validate';
+import { Router } from 'express'
+import controller from '../controllers/payment'
+import validate from '../validations/validate'
 
+const router = Router()
 
-const router = Router();
+router.post('/stripe/charge', validate, controller.stripePay())
 
-router.post('/stripe/charge', validate, controller.stripePay());
-
-export default router;
+export default router
