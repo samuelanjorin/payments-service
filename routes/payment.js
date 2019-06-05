@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import controller from '../controllers/payment'
-import validate from '../validations/validate'
+import validate from '../middlewares/validate'
 
 const router = Router()
 
