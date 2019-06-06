@@ -11,9 +11,7 @@ const port = process.env.RACS_PORT || 7005
 app.listen(port, () => {
   logger.info(`Listening to port ${port}.......`)
 })
-app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: __dirname });
-})
+
 process.on('uncaughtException', (ex) => {
   logger.error(ex.message, ex)
 })

@@ -5,7 +5,7 @@ import globalFunc from '../utils/globalfunc'
 
 function stripePay () {
   return asyncF(async (req, res) => {
-    const { amount, description, stripeToken, currency } = req.body
+    const { amount, description, stripeToken, currency, order_id } = req.body
 
     const charges = await makePayment(stripeToken, amount, currency || 'USD', description)
     if (charges === 'error') {
@@ -15,6 +15,7 @@ function stripePay () {
         field: 'token'
       })
     }
+    globalFunc.confirmOrder(order_id)
     return res.status(constants.NETWORK_CODES.HTTP_SUCCESS).json(charges)
   }, true)
 }
