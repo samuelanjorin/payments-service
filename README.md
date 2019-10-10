@@ -1,6 +1,6 @@
-# turing-users-service
+# turing-payments-service
 
-This is on one the services of Turing Eccomerce Microservices. 
+This is the payments-service of Turing Eccomerce Microservices.
 
 # Deployed on Port http://Host:7005
 
